@@ -36,33 +36,6 @@
 
 - [Live Website](https://live-poll-wine.vercel.app/) - Loading time may take few seconds initially (free tier).
 
-## 🖼️ Visual Journey
-
-<div align="center">
-<table>
-<tr>
-<td align="center">
-    <img src="./images/Home.png" alt="Home Page" width="100%"/><br />
-    <em>Home Dashboard</em>
-</td>
-<td align="center">
-    <img src="./images/pollsPage.png" alt="Polls Page" width="100%"/><br />
-    <em>Poll Directory</em>
-</td>
-</tr>
-<tr>
-<td align="center">
-    <img src="./images/votingPage.png" alt="Voting Interface" width="100%"/><br />
-    <em>Live Voting Interface</em>
-</td>
-<td align="center">
-    <img src="./images/createPollPage.png" alt="Poll Creation" width="100%"/><br />
-    <em>Poll Creation Studio</em>
-</td>
-</tr>
-</table>
-</div>
-
 ## 🛠️ Tech Architecture
 
 <table>
@@ -169,10 +142,6 @@ const socket = io("http://localhost:3000")
 - 📱 Mobile app version
 - 🔄 Enhanced sorting options
 - 👤 Extended user profiles
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
