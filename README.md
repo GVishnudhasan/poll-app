@@ -1,169 +1,185 @@
-<div align="center">
-    <img height="100px" src="./images/imageGIF.gif"/>
-    <h1>LivePoll - Live Polling Platform</h1>
-</div>
 
-LivePoll is an interactive web application designed to simplify the process of creating, participating in, and managing polls. It combines user-friendly features with real-time updates to deliver a seamless polling experience📊.
+# 📊 Lyzr Live Poll Platform
 
-## Features
+### Real-time Interactive Polling Platform
 
-- User can signup and login using his credentials, used cookie based authentication with jwt.
-- User can browse all the Polls created by other users in a pagination format and click on view to view the poll.
-- In poll view page user can vote on the poll and see the result of the poll live with chart using sockt.io.
-- User can bookmark the poll and see the bookmarked poll in bookmark page.
-- In user dashboard user can see the their details and manage their poll.
-- By clicking on the create poll button user can create a new poll and add options to the poll.
-- Used react-toastify for showing the error and success message.
-- Used chart.js and scocket.io-client for showing the poll result live in chart in poll view page.
-- Used daisyui and tailwind for styling the UI of the application for responsive design.
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://live-poll-wine.vercel.app/)
+[![Made with React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Made with Node](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+
+*Create, vote, and analyze polls in real-time with LivePoll's modern, responsive interface.*
+
+## ✨ Key Features
+
+🔐 **Secure Authentication**
+- JWT-based authentication with secure cookie storage
+- User registration and login system
+
+📊 **Interactive Polling**
+- Create custom polls with multiple options
+- Real-time vote tracking and results visualization
+- Live-updating charts powered by Chart.js
+- Bookmark favorite polls for quick access
+- Like favorite polls 
+
+👤 **User Dashboard**
+- Personal poll management
+- Bookmarked polls collection
+- Activity tracking and history
+
+🎯 **Modern UI/UX**
+- Responsive design using Tailwind CSS & DaisyUI
+- Real-time notifications via React-Toastify
+- Intuitive navigation and poll creation
 
 ## Links
 
 - [Live Website](https://live-poll-wine.vercel.app/) - Loading time may take few seconds initially (free tier).
-- [Backend Routes Doc](https://livepoll-anjx.onrender.com/docs/)
 
-## Preview Images
+## 🖼️ Visual Journey
 
-### Home Page
+<div align="center">
+<table>
+<tr>
+<td align="center">
+    <img src="./images/Home.png" alt="Home Page" width="100%"/><br />
+    <em>Home Dashboard</em>
+</td>
+<td align="center">
+    <img src="./images/pollsPage.png" alt="Polls Page" width="100%"/><br />
+    <em>Poll Directory</em>
+</td>
+</tr>
+<tr>
+<td align="center">
+    <img src="./images/votingPage.png" alt="Voting Interface" width="100%"/><br />
+    <em>Live Voting Interface</em>
+</td>
+<td align="center">
+    <img src="./images/createPollPage.png" alt="Poll Creation" width="100%"/><br />
+    <em>Poll Creation Studio</em>
+</td>
+</tr>
+</table>
+</div>
 
-<img src="./images/Home.png"/>
+## 🛠️ Tech Architecture
 
-### Polls Page
+<table>
+<tr>
+<th>Layer</th>
+<th>Technologies</th>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>
 
-<img src="./images/pollsPage.png"/>
+- 🎨 **UI**: `React`, `TailwindCSS`, `DaisyUI`
+- 📊 **State**: `React Query`
+- 🔄 **Real-time**: `Socket.io-client`, `react-chartjs-2`
+- 🎯 **UX**: `React-Toastify`, `React Router`, `React Icons`
 
-### Login Page
+</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>
 
-<img src="./images/Screenshot 2024-11-14 101710.png"/>
+- 🚀 **Core**: `Node.js`, `Express.js`
+- 🔒 **Security**: `JWT`, `bcrypt`
+- 📝 **Validation**: `Zod`, `Swagger-jsdoc`
+- 🔄 **Real-time**: `Socket.io`
+- 🗃️ **Database**: `MongoDB`, `Mongoose`
 
-### Signup Page
+</td>
+</tr>
+</table>
 
-<img src="./images/signup.png"/>
-
-### Poll Votting Page
-
-<img src="./images/votingPage.png"/>
-
-### Dashboard Page
-
-<img src="./images/dashboard.png"/>
-
-### Create Poll Page
-
-<img src="./images/createPollPage.png"/>
-
-### Bookmarks Page
-
-<img src="./images/bookmark.png"/>
-
-## Tech Stack
-
-### Frontend
-
-Framework & Routing: `ReactJS`, `React Router`  
-State Management: `Zustand`, `React Query`  
-Real-Time & Charts: `Socket.io-client`, `react-chartjs-2`  
-Styling: `TailwindCSS`, `DaisyUI`  
-Notifications & Icons: `React-Toastify`, `React Icons`
-
-### Backend
-
-Framework & Authentication: `Node.js`, `Express.js`, `JWT`, `bcrypt`  
-Validation & Documentation: `Zod`, `Swagger-jsdoc`  
-Real-Time Communication: `Socket.io`  
-Database & ORM: `Mongoose`
-
-### Others
-
-API Communication: `Axios`
-
-## Installation and Setup
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js & npm/yarn
+- MongoDB (local or cloud)
 
-- Node.js and npm/yarn installed.
-- MongoDB database set up locally or on a cloud provider.
+### Installation Steps
 
-### Steps
+1. **Clone & Setup**
+```bash
+# Clone repository
+git clone https://github.com/ManikMaity/LivePoll.git
+cd LivePoll
 
-1. Clone the Repository
+# Install dependencies for both frontend and backend
+cd frontend && npm install
+cd ../backend && npm install
+```
 
-   ```bash
-   git clone https://github.com/ManikMaity/LivePoll.git
-   cd LivePoll
-   ```
+2. **Configure Environment**
 
-2. Backend Setup
+Backend `.env`:
+```env
+PORT=3000
+DB_CONNECTION="your_mongodb_url"
+SALT_ROUNDS=6
+JWT_PRIVATE="your_jwt_key"
+CLIENT_URL="your_client_url"
+```
 
-   - Navigate to the backend directory:
-     ```bash
-     cd backend
-     ```
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Create a `.env` file and add the following:
-     `env
-    PORT=3000
-    DB_CONNECTION="your mongodb url" 
-    SALT_ROUNDS=6
-    JWT_PRIVATE="your jwt private key"
-    CLIENT_URL="your client url"
-     `
-   - Start the server:
-     ```bash
-     npm run dev
-     ```
+Frontend `.env`:
+```env
+VITE_API_URL="http://localhost:3000/api/v1"
+```
 
-3. Frontend Setup
+3. **Launch Application**
 
-   - Navigate to the frontend directory:
-     ```bash
-     cd frontend
-     ```
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Update `.env` file with the backend URL (e.g., `http://localhost:3000`).
-   - Start the development server:
-     ```bash
-     npm start
-     ```
+```bash
+# Terminal 1 - Frontend
+cd frontend
+npm run dev
 
-4. Access the Application
-   - Open a browser and go to `http://localhost:5173`.
+# Terminal 2 - Backend
+cd backend
+npm run dev
+```
+
+Visit `http://localhost:5173` in your browser 🚀
 
 ---
 
-### To Switch Between Local and Deployed Environments
+## 🔄 Environment Switching
 
-- Update backend `.env` with:
-  ```env
-  BACKEND_URL=http://localhost:3000
-  ```
-- Update frontend Axios base URL to:
-  ```javascript
-  axios.defaults.baseURL = "http://localhost:3000/api/v1";
-  ```
-- Update the Socket.io URL in the voting page:
-  ```javascript
-  const socket = io("http://localhost:3000");
-  ```
+For local development, update these configurations:
+
+```javascript
+// Backend .env
+BACKEND_URL="http://localhost:3000"
+
+// Frontend axios config
+axios.defaults.baseURL = "http://localhost:3000/api/v1"
+
+// Frontend Socket.io
+const socket = io("http://localhost:3000")
+```
+
+## 🌟 Future Roadmap
+
+- 🔍 Advanced poll search & filters
+- 📊 Multiple question polls
+- 🎨 User avatars
+- 📱 Mobile app version
+- 🔄 Enhanced sorting options
+- 👤 Extended user profiles
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## Usage
+<div align="center">
 
-- Navigate to the `frontend` directory and run `npm run dev` to start the development server.
-- Navigate to the `backend` directory and run `npm run dev` to start the server.
-- Open a browser and go to `http://localhost:5173` to access the application.
+Made with ❤️ by [GVishnudhasan](https://github.com/GVishnudhasan)
 
-## Future Improvements
-- Add a search feature to the poll page.
-- Add like feature to the poll.
-- sorting polls using created date and popularity.
-- Updated user.
-- User avatar.
-- Multiple question poll.
+[Live Demo](https://live-poll-wine.vercel.app/)
+
+</div>
