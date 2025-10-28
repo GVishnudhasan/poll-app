@@ -1,4 +1,4 @@
-import { JWT_PRIVATE, SALT } from "../config/veriables.js";
+import { JWT_PRIVATE, SALT } from "../config/variables.js";
 import { createUser, findUserByEmail } from "../repositories/user.repo.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";

@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
-import { CLIENT_URL, PORT } from './config/veriables.js';
+import { CLIENT_URL, PORT } from './config/variables.js';
 import { connectDB } from './config/dbConfig.js';
 import userRouter from './routes/v1/user.route.js';
 import swaggerDocs from '../swagger.js';

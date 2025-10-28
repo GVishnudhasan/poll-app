@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { JWT_PRIVATE } from "../config/veriables.js";
+import { JWT_PRIVATE } from "../config/variables.js";
 import { findUserById } from "../repositories/user.repo.js";
 
 export const verifyToken = async (req, res, next) => {

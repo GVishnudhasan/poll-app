@@ -45,8 +45,8 @@ function VotingPage() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    // const s = io("https://livepoll-anjx.onrender.com");
-    const s = io("http://localhost:3000");
+    const s = io("https://poll-app-c1hs.onrender.com");
+    // const s = io("http://localhost:3000");
     setSocket(s);
   
     s.on("connect", () => {
@@ -255,13 +255,6 @@ function VotingPage() {
 
                 {/* Action Buttons */}
                 <div className="flex items-center space-x-2">
-                  <button
-                    onClick={handleShare}
-                    className="p-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors duration-300"
-                    title="Share poll"
-                  >
-                    <FaShare className="w-4 h-4 text-gray-400" />
-                  </button>
                   <button
                     onClick={() => handleBookmark(pollId)}
                     className="p-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors duration-300"

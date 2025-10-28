@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { DB_URL } from "./veriables.js";
+import { DB_URL } from "./variables.js";
 
 export const connectDB = async () => {
     try{
